@@ -96,6 +96,6 @@ def func_open_network():
 def func_ajaxthml_test():
     username = request.form.get('username')
     password = request.form.get('password')
-    print(username)
+    print(username+'1111')
     print(password)
     return jsonify(username)
