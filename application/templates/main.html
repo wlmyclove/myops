@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block pagename %}main {% endblock %}
+{% block body %} 
+<form role="form">
+    <div class="form-group">
+        <table>
+            <tr>
+                <td>
+                    <input type="email" class="form-control" id="exampleInputEmail1" />
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>文档编号</th>
+      <th>城市</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+    <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

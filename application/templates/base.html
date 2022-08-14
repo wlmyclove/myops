@@ -1,0 +1,40 @@
+<html>
+<title>{% block pagename %} {% endblock %}</title>
+<header>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="/static/css/bootstrap.min.css" >
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="/static/js/bootstrap.min.js"></script>
+</header>
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="page-header">
+				<h1>
+					配置清单系统 <small>开发板 0.000001v</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-2 column">
+		
+			<ul class="nav nav-pills nav-stacked">
+				{%for menu in menuList %}
+					<li><a href = "/{{menu[2]}}">{{menu[1]}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="col-md-10 column">
+			{% block body %} {% endblock %}
+		</div>
+	</div>
+</div>
+
+
+{% block script %} {% endblock %}
+
+</body>
+</html>
+

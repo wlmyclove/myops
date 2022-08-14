@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block pagename %} 配置清单 {% endblock %}
+{% block body %}
+
+
+
+<table class="table table-hover table-striped" id = "wanglei" >
+<thead>
+	<tr>
+		<th>
+			编号
+		</th>
+		<th>
+			系统名称
+		</th>
+		<th>
+			级别
+		</th>
+		<th>
+			单位
+		</th>
+		<th>
+			责任人
+		</th>
+		<th>
+			电话
+		</th>
+		<th>
+			详情
+		</th>
+		
+
+		
+</thead>
+<tbody>
+{% for sinfo in systemInfo %}
+	<tr>
+		<td>
+			{{sinfo.id}}
+		</td>
+		<td>
+			{{sinfo.system_name}}
+		</td>
+		<td>
+			{{sinfo.system_types.name}}
+		</td>
+		<td>
+			{{sinfo.company_info.company_name}}
+		</td>
+		<td>
+			{{sinfo.company_info.person_name}}
+		</td>
+		<td>
+			{{sinfo.company_info.person_tel}}
+		</td>
+		<td>
+		<a href="operation/{{sinfo.id}}"  target="_blank" >查看详情</a>
+		</td>
+
+	
+
+	</tr>
+{% endfor %}
+</tbody>
+</table>
+
+
+<ul class="pagination pagination-sm">
+				<li>
+					 <a href="#">Prev</a>
+				</li>
+				<li>
+					 <a href="#">1</a>
+				</li>
+				<li>
+					 <a href="#">2</a>
+				</li>
+				<li>
+					 <a href="#">3</a>
+				</li>
+				<li>
+					 <a href="#">4</a>
+				</li>
+				<li>
+					 <a href="#">5</a>
+				</li>
+				<li>
+					 <a href="#">Next</a>
+				</li>
+			</ul>
+
+
+{% endblock %}
+{% block script %} 
+<script>
+	$('#wanglei').bootstrapTable({
+		ajax: function (result) {
+			#.ajax({
+				url: 'test',
+				type: 'POST'
+				data: {},
+				dataType: 'JSON',
+				success: function(data){
+					result.success({
+						row: data
+					});
+					$('#wanglei').bootstrapTable('load',data);
+				} 
+			});
+		},
+	})
+</script>
+
+{% endblock %}
