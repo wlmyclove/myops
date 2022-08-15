@@ -403,3 +403,9 @@ INFO [2022-08-15 17:22:06,446] 127.0.0.1 -> http://127.0.0.1:8088/login views 32
 INFO [2022-08-15 17:22:06,596] 127.0.0.1 -> http://127.0.0.1:8088/login views 57: user: zhangyue login check ok ,but user statu is 0
 INFO [2022-08-15 17:22:08,753] 127.0.0.1 -> http://127.0.0.1:8088/login views 32: user: wanglei begin login!
 INFO [2022-08-15 17:22:08,771] 127.0.0.1 -> http://127.0.0.1:8088/login views 38: user: wanglei login is success !
+INFO [2022-08-15 17:24:32,199] 127.0.0.1 -> http://127.0.0.1:8088/login views 32: user: zhangyue begin login!
+INFO [2022-08-15 17:24:32,365] 127.0.0.1 -> http://127.0.0.1:8088/login views 56: user: zhangyue login check ok ,but user statu is 0
+INFO [2022-08-15 17:24:35,910] 127.0.0.1 -> http://127.0.0.1:8088/login views 32: user: wanglei begin login!
+INFO [2022-08-15 17:24:35,926] 127.0.0.1 -> http://127.0.0.1:8088/login views 38: user: wanglei login is success !
+INFO [2022-08-15 17:24:53,515] 127.0.0.1 -> http://127.0.0.1:8088/login views 32: user: wanglei begin login!
+INFO [2022-08-15 17:24:53,534] 127.0.0.1 -> http://127.0.0.1:8088/login views 38: user: wanglei login is success !
