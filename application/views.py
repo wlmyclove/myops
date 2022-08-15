@@ -55,7 +55,6 @@ def func_auth_login():
                 else:
                     logger.info('user: ' + user.username + ' login check ok ,but user statu is ' + str(user.status) )
                     return render_template('index.html', message='User is Clock, Please call Admin!')
-                    #return jsonify('User is Clock, Please call Admin!')
             else:
                 logger.info('user: ' + username + ' login check Failed, For Username or Password Invaid!')
                 return render_template('index.html',message='Username or Password Invaid!!')

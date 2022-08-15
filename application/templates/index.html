@@ -64,47 +64,8 @@
 		</div>
 	</div>
 </div>
-<button type="submit"  class="btn btn-default" onclick="gogogo()"> AJAXTEST</button>
-<button id= "gogo" > ajaxdemo</button>
+
 </body>
 
-<script type="text/javascript">
-	function gogogo(){
-		var form= new FormData(document.getElementById("loginFrom"));
-		$.ajax(
-			{
-				type: 'POST',
-				url: '/ajaxhtml',
-				data: {
-					'username':form.get("username"),
-					'password':form.get("password")
-				},
-				success: function(data){
-					alert(data);
-					document.getElementById("testttttt").innerHTML=data;
-					
-				}
-			}
-		)
-	}
-	$('#gogo').click(function(){
-		var form= new FormData(document.getElementById("loginFrom"));
-		$.ajax(
-			{
-				type: 'POST',
-				url: '/ajaxhtml',
-				data: {
-					'username':form.get("username"),
-					'password':form.get("password")
-				},
-				success: function(data){
-					alert(data);
-					document.getElementById("testttttt").innerHTML=data;
-					
-				}
-			}
-		)
-	})
 
-</script>
 </html>
